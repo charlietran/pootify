@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+_______     ___      ___    _________  _____  ________  ____  ____  
+|_   __ \  .'   `.  .'   `. |  _   _  ||_   _||_   __  ||_  _||_  _| 
+  | |__) |/  .-.  \/  .-.  \|_/ | | \_|  | |    | |_ \_|  \ \  / /   
+  |  ___/ | |   | || |   | |    | |      | |    |  _|      \ \/ /    
+ _| |_    \  `-'  /\  `-'  /   _| |_    _| |_  _| |_       _|  |_    
+|_____|    `.___.'  `.___.'   |_____|  |_____||_____|     |______|   
+  _____       ___   ____   ____  ________   ______    _____  _____   
+ |_   _|    .'   `.|_  _| |_  _||_   __  |.' ____ \  |_   _||_   _|  
+   | |     /  .-.  \ \ \   / /    | |_ \_|| (___ \_|   | |    | |    
+   | |   _ | |   | |  \ \ / /     |  _| _  _.____`.    | '    ' |    
+  _| |__/ |\  `-'  /   \ ' /     _| |__/ || \____) |    \ \__/ /     
+ |________| `.___.'     \_/     |________| \______.'     `.__.'      
+                                                                     
+-->
+<html>
+	<head>
+		<style>
+			#bonk {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+			#buttan {
+				display: block;
+				margin: 1em auto;
+				font-size: 2em;
+				font-style: bold;
+				border-radius: 3px;
+				background-color: lightgrey;
+				border: 1px solid grey;
+				box-shadow: 4px 4px aquamarine;
+				cursor: pointer;
+			}
+			#juice {
+				display: none;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-image: url("theLastThingYouSeeBeforeYouDie.gif");
+				background-size: 232px 450px;
+		        animation: careerGoals 10s linear infinite;
+			}
+
+		      @keyframes careerGoals {
+				0% { background-position: 0 0; }
+				50% { background-position: 100% 0; }
+				100% { background-position: 0 0; }
+		      }
+		</style>
+		<script>
+		function doTheThing() {
+			document.getElementById('bonk').style.display = "none";
+			document.getElementById('juice').style.display = "block";
+			audioEl = document.getElementById('songOfDoom');
+			audioEl.load(); 
+			audioEl.play();
+		}
+		</script>
+
+	</head>
+	<body onSourceBeingRead="why are you reading the source for this ridiculous website">
+		<div id="bonk">
+			<button id="buttan" onclick="doTheThing()">click me ok</button>
+		</div>
+		<div id="juice"></div>
+		<audio id="songOfDoom" loop>
+			<source src="405_DancingPickle.mp3" type="audio/mpeg">
+		</audio>
+
+	</body>
+</html>
